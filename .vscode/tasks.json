@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build OpenGL Project",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-IC:/Users/abhij/OneDrive/Desktop/CgProject/include",    // Include path
+        "-LC:/Users/abhij/OneDrive/Desktop/CgProject/lib",        // Lib path
+        "main.cpp",                                               // Your source file
+        "-lfreeglut", "-lopengl32", "-lglu32",                    // Linking libs
+        "-o", "screensaver.exe"                                   // Output file
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compiling OpenGL screensaver"
+    }
+  ]
+}
